@@ -87,3 +87,6 @@ img {
   margin-top: 8px;
   text-decoration: none;
 }
+.product-button:hover {
+  background-color: #359527;
+}
