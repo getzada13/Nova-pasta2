@@ -23,6 +23,13 @@ li {
     width: 100%;
     margin: 0 auto;
 
+    @media @breakpointTablet {
+        max-width: 80%;
+    }
+
+    @media @breakpointMobile {
+        max-width: 70%;
+    }
 }
 
 header {
@@ -42,6 +49,11 @@ header {
 .menu {
     display: flex;
 
+    li {
+        font-weight: bold;
+        margin-left: 24px;
+    }
+
     li a {
         color: #fff;
         text-decoration: none;
@@ -60,6 +72,23 @@ section {
     row-gap: 4%;
     width: 100%;
 
+    @media @breakpointMobile {
+            display: block;
+
+            .product-item {
+                        margin-bottom: 32px;
+            }
+    }
+
+
+    @media @breakpointTablet {
+            grid-template-columns: repeat(2, 48.5%);
+            column-gap: 3%;
+        }
+    }
+
+
+    
     img {
         width: 100%;
         border-radius: 16px;
@@ -74,13 +103,5 @@ section {
         border-radius: 8px;
         margin-top: 8px;
         text-decoration: none;
-
-        &:hover {
-            background-color: darken([buttonColor], 10%);
-        }
-}
 }
 
-@media @breakpointMobile {
-    background-color: red;
-}
